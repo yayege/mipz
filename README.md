@@ -1,8 +1,14 @@
 # MIPS Programming
-MIPS Programming examples and algorithms, basically be on arithmetic operations or some data management process.
 
-MIPS_LCM:   Least common multiple in MIPS
+## MIPS Programming examples and algorithms, basically be on arithmetic operations or some data management process.
 
-MIPS_GCD:   Greatest Common Divisor 
+### MIPS_LCM:   Least common multiple in MIPS
 
-MIPS_strings: String manipulation in MIPS where the initial letter of each word is capitalized. 
+### MIPS_GCD:   Greatest Common Divisor 
+
+### MIPS_strings: String manipulation in MIPS where the initial letter of each word is capitalized. 
+
+```
+Small ebook available with MIPS examples and basic overview
+```
+
