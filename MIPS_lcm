@@ -1,0 +1,45 @@
+#run with MARS or similar simulator
+# Program to calculate the least common multiple of two numbers
+
+	.data		# variable declarations follow this line
+first: 	.word 20	# the first integer
+second: .word 15    	# the second integer                  
+														
+	.text		# instructions follow this line	
+																	                    
+main:     		# indicates start of code to test lcm the procedure
+			lw $a0, first  #$a0=first  
+			lw $a1, second #$a1=second 
+			
+			addi $t0,$zero,1  #$t0= 1 
+						
+		
+lcm:	     		# the “lcm” procedure
+			addi $t7,$zero,0    #$t7=0 
+			
+			div $t0,$a0      
+			mfhi $t1            # $t1 = $t0 mod first
+			
+			div $t0,$a1         # $t2= $t0 mod second 
+			mfhi $t2 
+			
+			bne $t1,$t7,L1 	    # if mod is not equal to 0 then go to L1
+			
+			bne $t2,$t7,L1      # if mod is not equal to 0 then go to L1
+			
+			li $v0, 1	    #print out the counter to get the lcm
+			move $a0, $t0 
+			syscall
+	               
+	                beq $t2,$t7,Exit    #stop statement to go to exit when its done
+			
+			
+			
+L1: 			
+			addi $t0,$t0,1      #increment the counter by 1 everytime the control fails
+			j lcm		    #jump back to lcm to continue the execution
+
+Exit:
+
+									
+# End of program
